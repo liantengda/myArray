@@ -54,20 +54,25 @@ public class MyArray {
             myArray.add(i,i);
         }
         Long initialEndTime = System.currentTimeMillis();
-        Long startTime = System.currentTimeMillis();
-        Object add = myArray.add(3, 520);
-        Long endTime = System.currentTimeMillis();
-        log.info("数组初始化用时{},数组插入用时{},得到数据{}",(initialEndTime-initialStartTime),(endTime-startTime),add);
-
         MyLink<Integer> myLink = new MyLink<>();
         long initialLinkStartTime = System.currentTimeMillis();
         for(int i = 0;i<10000000;i++){
             myLink.add(i);
         }
         long initialLinkEndTime = System.currentTimeMillis();
+        Long startTime = System.currentTimeMillis();
+        Object add = myArray.add(3, 520);
+        Long endTime = System.currentTimeMillis();
         long linkStartTime = System.currentTimeMillis();
         Object o = myLink.addByIndex(3, 520);
         long linkEndTime = System.currentTimeMillis();
-        log.info("链表初始化用时{},链表插入用时{},得到数据{}",(initialLinkEndTime-initialLinkStartTime),(linkEndTime-linkStartTime),o);
+        long queryArrayStartTime = System.currentTimeMillis();
+        Object o1 = myArray.get(5000000);
+        long queryArrayEndTime = System.currentTimeMillis();
+        long queryLinkStartTime = System.currentTimeMillis();
+        Object o2 = myLink.get(5000000);
+        long queryLinkEndTime = System.currentTimeMillis();
+        log.info("数组初始化用时{},数组插入用时{},得到数据{},数组查询用时{},得到数据{}",(initialEndTime-initialStartTime),(endTime-startTime),add,(queryArrayEndTime-queryArrayStartTime),o1);
+        log.info("链表初始化用时{},链表插入用时{},得到数据{},链表查询用时{},得到数据{}",(initialLinkEndTime-initialLinkStartTime),(linkEndTime-linkStartTime),o,(queryLinkEndTime-queryLinkStartTime),o2);
     }
 }
