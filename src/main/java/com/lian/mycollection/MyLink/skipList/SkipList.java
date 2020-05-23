@@ -173,7 +173,7 @@ public class SkipList<T> {
         long querySkipListEndTime = System.currentTimeMillis();
 
         long insertSkipListStartTime = System.currentTimeMillis();
-        skipList.put(1000001,520);
+        skipList.put(5000000,520);
         long insertSkipListEndTime = System.currentTimeMillis();
 
         long initialMyLinkStartTime = System.currentTimeMillis();
