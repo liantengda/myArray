@@ -1,6 +1,6 @@
 package com.lian.mycollection.MyLink.skipList;
 
-import com.lian.mycollection.MyLink.MyLink;
+import com.lian.mycollection.MyLink.ordinaryLink.MyLink;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Random;
@@ -89,8 +89,8 @@ public class SkipList<T> {
                 SkipListNode<T> p1=new SkipListNode<T>(SkipListNode.HEAD_KEY, null);
                 SkipListNode<T> p2=new SkipListNode<T>(SkipListNode.TAIL_KEY, null);
                 horizontalLink(p1, p2);
-                vertiacallLink(p1, head);
-                vertiacallLink(p2, tail);
+                verticalLink(p1, head);
+                verticalLink(p2, tail);
                 head=p1;
                 tail=p2;
             }
@@ -102,7 +102,7 @@ public class SkipList<T> {
 
             SkipListNode<T> e=new SkipListNode<T>(k, null);//只保存key就ok
             backLink(p, e);//将e插入到p的后面
-            vertiacallLink(e, q);//将e和q上下连接
+            verticalLink(e, q);//将e和q上下连接
             q=e;
             currentLevel++;
         }
@@ -125,7 +125,7 @@ public class SkipList<T> {
     /**
      * 垂直双向连接
      * */
-    private void vertiacallLink(SkipListNode<T> node1,SkipListNode<T> node2){
+    private void verticalLink(SkipListNode<T> node1, SkipListNode<T> node2){
         node1.down=node2;
         node2.up=node1;
     }

@@ -1,9 +1,7 @@
 package com.lian.mycollection.myArray;
 
-import com.lian.mycollection.MyLink.MyLink;
+import com.lian.mycollection.MyLink.ordinaryLink.MyLink;
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.LinkedList;
 
 /**
  * @author Ted

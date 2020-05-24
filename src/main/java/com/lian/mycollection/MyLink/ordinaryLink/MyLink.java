@@ -1,8 +1,6 @@
-package com.lian.mycollection.MyLink;
+package com.lian.mycollection.MyLink.ordinaryLink;
 
 import lombok.Data;
-
-import java.util.LinkedList;
 
 /**
  * @author Ted

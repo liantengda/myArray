@@ -1,4 +1,4 @@
-package com.lian.mycollection.MyLink;
+package com.lian.mycollection.MyLink.skipList;
 
 import java.util.Random;
 
