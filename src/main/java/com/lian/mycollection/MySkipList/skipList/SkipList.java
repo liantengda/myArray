@@ -1,4 +1,4 @@
-package com.lian.mycollection.MyLink.skipList;
+package com.lian.mycollection.MySkipList.skipList;
 
 import com.lian.mycollection.MyLink.ordinaryLink.MyLink;
 import lombok.extern.slf4j.Slf4j;

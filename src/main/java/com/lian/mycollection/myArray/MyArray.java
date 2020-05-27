@@ -10,15 +10,20 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class MyArray {
-
+    /**
+     * 初始化容量
+     */
     private Integer initialCapacity = 100000000;
+    /**
+     * 真实元素数量
+     */
     private Integer arrayRealSize = 0;
-
-    private String dataType = "Object";
+    /**
+     * 真正存储数据的地方
+     */
     private Object[] myArray = new Object[initialCapacity];
 
-    public MyArray(String dataType,int initialCapacity){
-            this.dataType = dataType;
+    public MyArray(int initialCapacity){
             this.initialCapacity = initialCapacity;
     }
 
@@ -57,7 +62,7 @@ public class MyArray {
     }
 
     public static void main(String[] args) {
-        MyArray myArray = new MyArray("Integer", 1000000);
+        MyArray myArray = new MyArray(1000000);
         Long initialStartTime = System.currentTimeMillis();
         for(int i = 0;i<1000000;i++){
             myArray.add(i,i);

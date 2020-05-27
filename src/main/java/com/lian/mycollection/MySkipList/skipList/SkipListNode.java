@@ -1,6 +1,4 @@
-package com.lian.mycollection.MyLink.skipList;
-
-import org.apache.poi.ss.formula.functions.T;
+package com.lian.mycollection.MySkipList.skipList;
 
 /**
  * @author Ted
