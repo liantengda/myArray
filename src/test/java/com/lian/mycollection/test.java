@@ -33,4 +33,10 @@ public class test {
     public void setRedisUtil(RedisUtil redisUtil) {
 
     }
+
+    public static void main(String[] args) {
+        String string1 = new String("123");
+        String string2 = new String("123");
+        System.out.println(string1==string2);
+    }
 }
